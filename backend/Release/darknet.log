@@ -1,0 +1,70 @@
+﻿  image.c
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime.h : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime_api.h(3351): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime_api.h(3351): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime_api.h(3351): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime.h : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_fp16.h : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime.h : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime.h : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\program files\nvidia gpu computing toolkit\cuda\v10.1\include\cuda_runtime_api.h(3351): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+c:\users\vicky\desktop\darknet-master\src\image.c(28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(29): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(116): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(133): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(183): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(234): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(235): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(236): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(237): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(427): warning C4305: 'function': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(463): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(469): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(367): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(393): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(394): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(395): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(396): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(319): warning C4101: 'a': unreferenced local variable
+c:\users\vicky\desktop\darknet-master\src\image.c(501): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(535): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(498): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(518): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(519): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(520): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(521): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(601): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(605): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(818): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(834): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(835): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(840): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(841): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(853): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(854): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(859): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(860): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(906): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1059): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1062): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1064): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1065): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1115): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1139): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1170): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1186): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1382): warning C4305: 'function': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1383): warning C4305: 'function': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1384): warning C4305: 'function': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1385): warning C4305: 'function': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1402): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1403): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1404): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\vicky\desktop\darknet-master\src\image.c(1448): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vicky\desktop\darknet-master\src\image.c(1622): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  6 of 1506 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    9 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  darknet.vcxproj -> C:\Users\Vicky\Desktop\darknet-master\build\darknet\x64\darknet.exe

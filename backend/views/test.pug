@@ -1,0 +1,97 @@
+doctype html
+html(lang='zxx')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		title #{username}
+		link(rel='stylesheet', href='/template/main/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/template/main/css/animate.css')
+		link(rel='stylesheet', href='/template/main/css/owl.carousel.min.css')
+		link(rel='stylesheet', href='/template/main/css/all.css')
+		link(rel='stylesheet', href='/template/main/css/flaticon.css')
+		link(rel='stylesheet', href='/template/main/css/themify-icons.css')
+		link(rel='stylesheet', href='/template/main/css/magnific-popup.css')
+		link(rel='stylesheet', href='/template/main/css/slick.css')
+		link(rel='stylesheet', href='/template/main/css/style.css')
+		style.
+			.text-divider{margin: 1em 2em; line-height: 0; text-align: center;}
+			.text-divider span{background-color: #ffffff; padding: 0 1em;}
+			.text-divider:before{ content: " "; display: block; border-top: 1px solid #e3e3e3; border-bottom: 1px solid #f7f7f7;}
+	body(style="height: 100vh;")
+		section.about_us.pb-3
+			.container
+				.row
+					.col-12.mt-10
+						.about_us_text.text-center
+							.asd(style="position: fixed; top: 25%; transform: translateX(-50%); left: 50%; width: 85%")
+								form#form-login.login100-form.validate-form
+									<img src="/template/main/img/logo-new.png">
+									h2.text-center.mb-3(style='font-size: 18px; font-weight: 600; color: #9D9D9D') Sign in start using the application
+									.alert#notif-wrong.alert-danger.d-none(role='alert')
+										h4.alert-heading Sorry!
+										| Username or Password is incorrect, please try again.
+									.alert#notif-failed.alert-danger.d-none(role='alert')
+										h4.alert-heading Sorry!
+										| Something wrong happen, please try again.
+									<div class="mt-10">
+										<input type="text" name="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" required="" class="single-input" style="background-color: #FAFAFA; border: 1px solid #E6E6E6;">
+									</div>
+									<div class="mt-10">
+										<input type="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required="" class="single-input" style="background-color: #FAFAFA; border: 1px solid #E6E6E6;">
+									</div>
+									<div class="mt-10">
+										<button id="btn-submit" type="submit" style="font-size: 1em" class="btn btn-block genric-btn info radius">Login</button>
+									</div>
+									<div class="mt-10">
+										<p><small>Forgot Your Detail Login? <a href="">Get help signing in</a></small></p>
+									</div>
+			<div style="position: fixed; bottom: 5em; left: 50%; width: 100%; transform: translateX(-50%);">
+				<p style="line-height: 0" class="text-divider"><span>Or</span></p>
+			</div>
+			<footer class="page-footer font-small blue" style="background-color: #F5F5F5; position: fixed; bottom: 0; left: 50%; width: 100%; transform: translateX(-50%); border-top: 1px solid #e3e3e3" >
+				<div class="footer-copyright text-center" style="padding-bottom: 5em;">Don't have an account?
+					<a href="http://140.118.101.215:5000/register"> Sign Up</a>
+				</div>
+			</footer>
+		script(src='/template/main/js/jquery-1.12.1.min.js')
+		script(src='/template/main/js/popper.min.js')
+		script(src='/template/main/js/bootstrap.min.js')
+		script(src='/template/main/js/jquery.magnific-popup.js')
+		script(src='/template/main/js/swiper.min.js')
+		script(src='/template/main/js/masonry.pkgd.js')
+		script(src='/template/main/js/owl.carousel.min.js')
+		script(src='/template/main/js/jquery.nice-select.min.js')
+		script(src='/template/main/js/slick.min.js')
+		script(src='/template/main/js/jquery.ajaxchimp.min.js')
+		script(src='/template/main/js/custom.js')
+		script.
+			$(document).on('click', '#btn-submit', function(e) {
+				let data = $('#form-login').serializeArray();
+				let values = {};
+
+				$('.alert').addClass('d-none');
+
+				if(data[0]['value'] && data[1]['value']) {
+					e.preventDefault();
+
+					$.each(data, function(i, field) {
+						values[field.name] = field.value;
+					});
+
+					$.ajax({
+						url: 'http://140.118.101.215:5000/users/login',
+						type: 'POST',
+						data: values
+					}).done(function(data) {
+						if(data.error == 2) {
+							$('#notif-wrong').removeClass('d-none');
+						} else if(data.error == 0) {
+							window.location.href = "http://140.118.101.215:5000";
+						}
+					}).fail(function(data) {
+						if(data.error == 1) {
+							$('#notif-failed').removeClass('d-none');
+						}
+					})
+				}
+			});

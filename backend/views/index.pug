@@ -1,0 +1,483 @@
+doctype html
+html(lang='en')
+	head
+		title #{username} 
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css')
+		link(rel='icon', type='image/png', href='images/icons/favicon.ico')
+		link(rel='stylesheet', type='text/css', href='template/login/vendor/bootstrap/css/bootstrap.min.css')
+		style.
+			.modal-backdrop {
+				background-color: #CDCDCD !important;
+			}
+			.fade.show {
+				opacity: 0.9;
+			}
+			.modal-content {
+				border-radius: 1.3em !important;
+				border: 1px solid rgba(0,0,0,.1);
+			}
+			.modal-dialog {
+				margin: auto 4em !important;
+			}
+			.heading-alert {
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 1.5em;
+				color: #010101;
+				margin-bottom: 0.3em;
+			}
+			.heading-body {
+				font-size: 14px;
+				line-height: 1.5em;
+				color: #010101;
+				margin-bottom: 0;
+			}
+			.modal-footer a {
+				text-decoration: none;
+			}
+
+			body {
+				margin: 0;
+				background-color: #fafafa !important;
+			}
+
+			.container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				height: 100vh;
+				padding-right: 0 !important;
+				padding-left: 0 !important;
+			}
+
+			.phone-container {
+				position: relative;
+				display: flex;
+				align-items: flex-end;
+				height: 100vh;
+				width: 100%;
+				background: #fff;
+				box-sizing: border-box;
+
+				transition: background 0.3s linear;
+			}
+
+			.tab-nav-container {
+				display: flex;
+				justify-content: space-between;
+
+				width: 100%;
+				margin: 0;
+				padding: 20px 20px 30px 20px;
+				background: #fff;
+				box-sizing: border-box;
+				border-top: 1px solid rgba(0, 0, 0, 0.2);
+				list-style: none;
+			}
+
+			.tab {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0 20px;
+
+				border-radius: 50px;
+				cursor: pointer;
+			}
+
+			.tab-blue.active {
+				background-color: #3897f0;
+				color: #fff;
+			}
+
+			.tab p {
+				font-size: 16px;
+				overflow: hidden;
+				max-width: 0;
+			}
+
+			.tab i {
+				color: #999;
+			}
+
+			.tab.active p {
+				margin-left: 10px;
+				margin-bottom: 0;
+				max-width: 200px;
+				transition: max-width 0.4s linear;
+			}
+
+			.tab.active i {
+				color: #fff;
+			}
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				margin-top: -140px;
+				width: 100%;
+
+				text-align: center;
+				font-size: 240px;
+				color: #fff;
+			}
+
+			.content p {
+				line-height: 23px;
+				font-size: 16px;
+				color: #999;
+				margin-bottom: 10px;
+			}
+
+			.content h3 {
+				color: #999;
+				margin-bottom: 30px;
+			}
+
+			p.content-title {
+				line-height: 23px;
+				font-weight: 700;
+				font-size: 23px;
+				color: #999;
+			}
+
+			* { margin: 0px; padding: 0px; }
+			.friend{
+				height: 70px;
+				border-bottom: 1px solid #e7ebee;		
+				position: relative;
+			}
+			.friend:hover{
+				background: #f1f4f6;
+				cursor: pointer;
+			}
+			.friend img{
+				width: 37px;
+				height: 40px;
+				border-radius: 50%;
+				margin: 15px;
+				float: left;
+			}
+			.floatingImg{
+				width: 40px;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 12px;
+				border: 3px solid #fff;
+			}
+			.friend p {
+				line-height: 1.2;
+				padding: 15px 0 0 0;
+				float: left;
+				width: 220px;
+			}
+			.friend p.image-title {
+				margin-bottom: 0 !important;
+			}
+			.friend p.image-date {
+				padding-top: 0 !important;
+			}
+			.friend p strong{
+				font-weight: 600;
+				font-size: 15px;
+				color: #999;
+			}
+			.friend p span{
+				font-size: 13px;
+				font-weight: 400;
+				color: #999;
+			}
+			.friend .status{
+				background: #26c281;
+				border-radius: 50%;	
+				width: 9px;
+				height: 9px;
+				position: absolute;
+				top: 31px;
+				right: 17px;
+			}
+			.friend .status.away{background:#ffce54;}
+			.friend .status.inactive{background:#eaeef0;}
+
+			.tab-no-image {
+				position: absolute;
+				top: 45%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 85%;
+			}
+			.tab-with-image {
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			/* profile */
+			.wrapper {
+				width: 100%;
+				height: auto;
+				min-height: 100vh;
+				padding-top: 100px;
+				display: flex;
+				background-image: url("/template/background.png");
+				background-color: #fafafa;
+			}
+			@media screen and (max-width: 768px) {
+				.wrapper {
+					height: auto;
+					min-height: calc(100vh - 91px);
+					padding-top: 100px;
+				}
+			}
+			.profile-card {
+				width: 100%;
+				background: #fff;
+				max-width: 700px;
+				position: relative;
+				margin-top: 8.5em;
+				border-top: 2px solid #d3d3d3;
+			}
+			.profile-card.active .profile-card__cnt {
+				filter: blur(6px);
+			}
+			.profile-card.active .profile-card-message, .profile-card.active .profile-card__overlay {
+				opacity: 1;
+				pointer-events: auto;
+				transition-delay: 0.1s;
+			}
+			.profile-card.active .profile-card-form {
+				transform: none;
+				transition-delay: 0.1s;
+			}
+			.profile-card__img {
+				width: 150px;
+				height: 150px;
+				margin-left: auto;
+				margin-right: auto;
+				transform: translateY(-50%);
+				border-radius: 50%;
+				overflow: hidden;
+				position: relative;
+				z-index: 4;
+				border: 2px solid #d3d3d3;
+			}
+			.profile-card__img img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+			.profile-card__cnt {
+				margin-top: -70px;
+				text-align: center;
+				padding: 0 20px;
+				transition: all 0.3s;
+			}
+			.profile-card__name {
+				font-weight: 700;
+				font-size: 24px;
+				color: #999;
+			}
+			.profile-card-inf {
+				margin-top: 2em;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				align-items: flex-start;
+			}
+			.profile-card-inf__item {
+				padding: 10px 35px;
+				min-width: 150px;
+			}
+			@media screen and (max-width: 768px) {
+				.profile-card-inf__item {
+					padding: 10px 20px;
+					min-width: 120px;
+				}
+			}
+			.profile-card-inf__title {
+				line-height: 23px;
+				font-weight: 700;
+				font-size: 23px;
+				color: #999;
+			}
+			.profile-card-inf__txt {
+				font-size: 12px;
+				color: #999;
+			}
+			.profile-card-ctr {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 6em;
+			}
+			@media screen and (max-width: 576px) {
+				.profile-card-ctr {
+					flex-wrap: wrap;
+				}
+			}
+
+			.btn {
+				margin: 12px auto;
+				padding: 12px;
+				font-size: 12px;
+				color: #fff;
+			}
+
+			::-webkit-scrollbar {
+				display: none;
+			}
+	body
+		span#username.d-none #{username}
+		a#refresh(href='', style='position: absolute; top: 0; right: 0; color: #000; z-index: 9999999') refresh
+		.container
+			.phone-container
+				.content#tab-home(style='position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); width: 85%')
+					p.text-center.content-title.mb-3 Hello, #{username}
+					p.text-center
+						| To start using the application, please tap the 
+						b camera button 
+						| ( 
+						i.fas.fa-camera
+						|  ) on the top right of the screen.
+					p.text-center
+						| Please make sure the object you want to detect is right in the 
+						b middle of the screen 
+						| and the 
+						b image is clear 
+						| and 
+						b enough light.
+
+				.content#tab-image.d-none
+
+				.content#tab-profile.d-none.tab-with-image
+					.wrapper
+						.profile-card.js-profile-card
+							.profile-card__img
+								img(src='/template/user.png', alt='profile card')
+							.profile-card__cnt.js-profile-cnt
+								.profile-card__name #{username}
+							.profile-card-inf
+								.profile-card-inf__item.text-center
+									#total-picture.profile-card-inf__title 0
+									.profile-card-inf__txt Pictures
+								.profile-card-inf__item.text-center
+									#total-feedback.profile-card-inf__title 0
+									.profile-card-inf__txt Feedbacks
+								.profile-card-inf__item.text-center
+									#total-friend.profile-card-inf__title 0
+									.profile-card-inf__txt Friends
+							.profile-card-ctr
+								a#edit-profile.btn.btn-secondary.btn-block(href='', style='position: absolute; bottom: 7em; text-align: center; left: 5%; width: 90%;') Edit Profile
+								a#logout.btn.btn-danger.btn-block(href='', style='position: absolute; bottom: 3em; text-align: center; left: 5%; width: 90%;') Logout
+
+				ul.tab-nav-container
+					li.tab.tab-blue.active
+						i.fa.fa-home.fa-lg(aria-hidden="true" data-id="tab-home")
+						p Home
+					li.tab.tab-blue
+						i.fa.fa-images.fa-lg(aria-hidden="true" data-id="tab-image")
+						p Image
+					li.tab.tab-blue
+						i.fa.fa-user-circle.fa-lg(aria-hidden="true" data-id="tab-profile")
+						p Profile
+
+		#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+			.modal-dialog.modal-sm.h-100.d-flex.flex-column.justify-content-center.my-0(role='document')
+				.modal-content
+					.modal-body.text-center
+						p.heading-alert
+						p.heading-body
+					.modal-footer(style="padding-top: 0.5em; padding-bottom: 0.5em;")
+						a.mx-auto(href='', data-dismiss='modal') Close
+
+		script(src='template/login/vendor/jquery/jquery-3.2.1.min.js')
+		script(src='/template/main/js/popper.min.js')
+		script(src='template/login/vendor/bootstrap/js/bootstrap.min.js')
+		script.
+			// edit profile modal
+			$(document).on('click', '#edit-profile', function(e) {
+				e.preventDefault();
+				$('.heading-alert').text('Sorry');
+				$('.heading-body').text('Feature not release yet.');
+				$('#exampleModal').modal('show');
+			})
+
+			$(document).on('click', '#logout', function(e) {
+				e.preventDefault();
+				$.ajax({
+					url: 'http://140.118.101.215:5000/users/logout',
+					type: 'GET'
+				}).done(function(data) {
+					window.location.href = "http://140.118.101.215:5000";
+				})
+			})
+
+			// tab selection
+			const tabBtn = document.querySelectorAll(".tab"),
+			tabContainer = document.querySelector(".tab-nav-container"),
+			phContainer = document.querySelector(".phone-container");
+
+			tabBtn.forEach((clickedTab) => {
+				clickedTab.addEventListener("click", () => {
+					tabBtn.forEach((tab) => {
+						tab.classList.remove("active");
+					});
+
+					clickedTab.classList.add("active");
+
+					let tab = $(clickedTab.querySelector(".fa")).attr('data-id');
+
+					const selector = '.content';
+					$(selector).each(function() {
+						$(this).addClass('d-none');
+					});
+					
+					$('.content#'+tab).removeClass('d-none');
+				});
+			});
+
+			// picture load
+			let username = $('#username').text();
+			$.ajax({
+				url: 'http://140.118.101.215:5000/images/views?username='+username,
+				type: 'GET'
+			}).done(function(data) {
+				let html = '';
+
+				let total = data.length;
+				$('#total-picture').text(total);
+
+				if(total == 0) {
+					html += '<p class="text-center content-title mb-3">No Photos found';
+					html += '<p class="text-center">You can take photo using <b>camera button </b>( <i class="fas fa-camera"></i> ) on the top right of the screen.</p>';
+					html += '</p>';
+
+					$('.content#tab-image').addClass('tab-no-image');
+				} else {
+					html += '<div id="friends" style="overflow-y: scroll; height: calc(100vh - 91px);">'
+					data.forEach(function(element, index) {
+						html += '<a href="http://140.118.101.215:5000/image-details?username='+username+'&id='+element._id+'">';
+						html += '<div class="friend">';
+						html += '<img src="/results/images/'+element.file_box+'" />';
+						html += '<p class="image-title"><strong>Picture '+(total - index)+'</strong></p>';
+						html += '<p class="image-date"><span>'+element.create_at+'</span></p>';
+						html += '<div class="status inactive"></div>';
+						html += '</div>';
+						html += '</a>';
+					});
+					html += '</div>'
+
+					$('.content#tab-image').addClass('tab-with-image');
+				}
+
+				$('#tab-image').append(html);
+			})
+
+

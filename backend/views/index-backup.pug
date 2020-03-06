@@ -1,0 +1,86 @@
+doctype html
+html(lang='zxx')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		title #{username}
+		link(rel='stylesheet', href='/template/main/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/template/main/css/animate.css')
+		link(rel='stylesheet', href='/template/main/css/owl.carousel.min.css')
+		link(rel='stylesheet', href='/template/main/css/all.css')
+		link(rel='stylesheet', href='/template/main/css/flaticon.css')
+		link(rel='stylesheet', href='/template/main/css/themify-icons.css')
+		link(rel='stylesheet', href='/template/main/css/magnific-popup.css')
+		link(rel='stylesheet', href='/template/main/css/slick.css')
+		link(rel='stylesheet', href='/template/main/css/style.css')
+		style.
+			.container-login100-form-btn {
+			width: 100%;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			}
+
+			.login100-form-btn {
+			font-family: Poppins-Medium;
+			font-size: 16px;
+			color: #fff;
+			line-height: 1.2;
+			text-transform: uppercase;
+
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 20px;
+			width: 100%;
+			height: 50px;
+			background-color: #57b846;
+			border-radius: 25px;
+
+			-webkit-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			-moz-transition: all 0.4s;
+			transition: all 0.4s;
+			}
+
+			.login100-form-btn:hover  {
+			background-color: #333333;
+			box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			}
+	body
+		section.about_us.pb-3
+			.container
+				.row.align-items-center.justify-content-between
+					.col-12.mt-10
+						.about_us_text.text-cente
+							.asd(style="position: fixed; top: 45%; transform: translateY(-50%); transform: left: 50%; width: 90%")
+								h2.text-center Hello, #{username}
+								p.text-center.mb-3(style='line-height: 29px;') 
+									| To start using the application, tap the camera button (
+									i.fas.fa-camera
+									| ) on the top right of the screen.
+								p.text-center.mb-3(style='line-height: 29px;') Please make sure the object You want to detect is right in the middle of the screen and the image is clear and enough light.
+							a.login100-form-btn(href='http://140.118.101.215:5000/images', style='position: fixed; bottom: 1em; left: 50%; transform: translateX(-50%); max-width: 93%;') Show Picture
+		script(src='/template/main/js/jquery-1.12.1.min.js')
+		script(src='/template/main/js/popper.min.js')
+		script(src='/template/main/js/bootstrap.min.js')
+		script(src='/template/main/js/jquery.magnific-popup.js')
+		script(src='/template/main/js/swiper.min.js')
+		script(src='/template/main/js/masonry.pkgd.js')
+		script(src='/template/main/js/owl.carousel.min.js')
+		script(src='/template/main/js/jquery.nice-select.min.js')
+		script(src='/template/main/js/slick.min.js')
+		script(src='/template/main/js/jquery.ajaxchimp.min.js')
+		script(src='/template/main/js/custom.js')

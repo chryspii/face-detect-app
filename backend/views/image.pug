@@ -1,0 +1,193 @@
+doctype html
+html(lang='zxx')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		title #{username}
+		link(rel='stylesheet', href='/template/main/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/template/main/css/animate.css')
+		link(rel='stylesheet', href='/template/main/css/owl.carousel.min.css')
+		link(rel='stylesheet', href='/template/main/css/all.css')
+		link(rel='stylesheet', href='/template/main/css/flaticon.css')
+		link(rel='stylesheet', href='/template/main/css/themify-icons.css')
+		link(rel='stylesheet', href='/template/main/css/magnific-popup.css')
+		link(rel='stylesheet', href='/template/main/css/slick.css')
+		link(rel='stylesheet', href='/template/main/css/style.css')
+		style.
+			.card {
+			font-size: 1em;
+			overflow: hidden;
+			padding: 0;
+			border: none;
+			border-radius: .28571429rem;
+			box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+			}
+
+			.card-block {
+			font-size: 1em;
+			position: relative;
+			margin: 0;
+			padding: 1em;
+			border: none;
+			border-top: 1px solid rgba(34, 36, 38, .1);
+			box-shadow: none;
+			}
+
+			.card-img-top {
+			display: block;
+			width: 100%;
+			height: auto;
+			}
+
+			.card-title {
+			font-size: 1.28571429em;
+			font-weight: 700;
+			line-height: 1.2857em;
+			}
+
+			.card-text {
+			clear: both;
+			margin-top: .5em;
+			color: rgba(0, 0, 0, .68);
+			}
+
+			.card-footer {
+			font-size: 1em;
+			position: static;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			padding: .75em 1em;
+			color: rgba(0, 0, 0, .4);
+			border-top: 1px solid rgba(0, 0, 0, .05) !important;
+			background: #fff;
+			}
+
+			.card-inverse .btn {
+			border: 1px solid rgba(0, 0, 0, .05);
+			}
+
+			.profile {
+			position: absolute;
+			top: -12px;
+			display: inline-block;
+			overflow: hidden;
+			box-sizing: border-box;
+			width: 25px;
+			height: 25px;
+			margin: 0;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			}
+
+			.profile-avatar {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			}
+
+			.profile-inline {
+			position: relative;
+			top: 0;
+			display: inline-block;
+			}
+
+			.profile-inline ~ .card-title {
+			display: inline-block;
+			margin-left: 4px;
+			vertical-align: top;
+			}
+
+			.text-bold {
+			font-weight: 700;
+			}
+
+			.meta {
+			font-size: 1em;
+			color: rgba(0, 0, 0, .4);
+			}
+
+			.meta a {
+			text-decoration: none;
+			color: rgba(0, 0, 0, .4);
+			}
+
+			.meta a:hover {
+			color: rgba(0, 0, 0, .87);
+			}
+	body
+		section.about_us.pb-3
+			.container
+				.row.align-items-center.justify-content-between
+					.col-12.mt-10
+						span#username.d-none #{username}
+						.row#image-list
+							
+
+		script(src='/template/main/js/jquery-1.12.1.min.js')
+		script(src='/template/main/js/popper.min.js')
+		script(src='/template/main/js/bootstrap.min.js')
+		script(src='/template/main/js/jquery.magnific-popup.js')
+		script(src='/template/main/js/swiper.min.js')
+		script(src='/template/main/js/masonry.pkgd.js')
+		script(src='/template/main/js/owl.carousel.min.js')
+		script(src='/template/main/js/jquery.nice-select.min.js')
+		script(src='/template/main/js/slick.min.js')
+		script(src='/template/main/js/jquery.counterup.min.js')
+		script(src='/template/main/js/waypoints.min.js')
+		script(src='/template/main/js/contact.js')
+		script(src='/template/main/js/jquery.ajaxchimp.min.js')
+		script(src='/template/main/js/jquery.form.js')
+		script(src='/template/main/js/jquery.validate.min.js')
+		script(src='/template/main/js/mail-script.js')
+		script(src='/template/main/js/custom.js')
+		script.
+			let username = $('#username').text();
+
+			$.ajax({
+				url: 'http://140.118.101.215:5000/images/views?username='+username,
+				type: 'GET'
+			}).done(function(data) {
+				let html = '';
+
+				let total = data.length
+
+				if(total == 0) {
+					html += '<div class="col-12" style="position: fixed; top: 50%; transform: translateY(-50%)">';
+					html += '<p class="text-center">You don\'t have any uploaded picture yet.</p>';
+					html += '<br>';
+					html += '<p class="text-center">Tap the camera button ( <i class="fas fa-camera"></i> ) on the top right of the screen to Start</p>';
+					html += '</div>';
+				} else {
+					data.forEach(function(element, index) {
+						let padding 	
+						if(index%2 == 0) {
+							padding = "padding-right: 7px";
+						} else {
+							padding = "padding-left: 7px";
+						}
+						html += '<div class="col-6 mb-3" style="'+padding+'">';
+						html += '<a href="http://140.118.101.215:5000/image-details?username='+username+'&id='+element._id+'">';
+						html += '<div class="card card-inverse card-info">';
+						html += '<div style="position: relative; width: auto; height: 100px; overflow: hidden;">';
+						html += '<img class="card-img-top" src="/results/images/'+element.file_box+'" style="position: absolute; top: -9999px; left: -9999px; right: -9999px; bottom: -9999px; margin: auto;">';
+						html += '</div>';
+						html += '<div class="card-block">';
+						html += '<figure class="profile">';
+						html += '<img src="/results/images/'+element.file_box+'" class="profile-avatar" alt="">';
+						html += '</figure>';
+						html += '<h4 class="card-title mb-1">Picture '+(total - index)+'</h4>';
+						html += '<div class="meta card-text mt-0">';
+						html += '<a>'+element.create_at+'</a>';
+						html += '</div>';
+						html += '</div>';
+						html += '</div>';
+						html += '</a>';
+						html += '</div>';
+					});
+				}
+
+				$('#image-list').append(html);
+			})
+			

@@ -1,0 +1,389 @@
+doctype html
+html(lang='zxx')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		title #{username}
+		link(rel='stylesheet', href='/template/main/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/template/main/css/animate.css')
+		link(rel='stylesheet', href='/template/main/css/owl.carousel.min.css')
+		link(rel='stylesheet', href='/template/main/css/all.css')
+		link(rel='stylesheet', href='/template/main/css/flaticon.css')
+		link(rel='stylesheet', href='/template/main/css/themify-icons.css')
+		link(rel='stylesheet', href='/template/main/css/magnific-popup.css')
+		link(rel='stylesheet', href='/template/main/css/slick.css')
+		link(rel='stylesheet', href='/template/main/css/style.css')
+		style.
+			.card {
+			font-size: 1em;
+			overflow: hidden;
+			padding: 0;
+			border: none;
+			border-radius: .28571429rem;
+			box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+			}
+
+			.card-block {
+			font-size: 1em;
+			position: relative;
+			margin: 0;
+			padding: 1em;
+			border: none;
+			border-top: 1px solid rgba(34, 36, 38, .1);
+			box-shadow: none;
+			}
+
+			.card-img-top {
+			display: block;
+			width: 100%;
+			height: auto;
+			}
+
+			.card-title {
+			font-size: 1.28571429em;
+			font-weight: 700;
+			line-height: 1.2857em;
+			}
+
+			.card-text {
+			clear: both;
+			margin-top: .5em;
+			color: rgba(0, 0, 0, .68);
+			}
+
+			.card-footer {
+			font-size: 1em;
+			position: static;
+			top: 0;
+			left: 0;
+			max-width: 100%;
+			padding: .75em 1em;
+			color: rgba(0, 0, 0, .4);
+			border-top: 1px solid rgba(0, 0, 0, .05) !important;
+			background: #fff;
+			}
+
+			.card-inverse .btn {
+			border: 1px solid rgba(0, 0, 0, .05);
+			}
+
+			.profile {
+			position: absolute;
+			top: -12px;
+			display: inline-block;
+			overflow: hidden;
+			box-sizing: border-box;
+			width: 25px;
+			height: 25px;
+			margin: 0;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			}
+
+			.profile-avatar {
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			}
+
+			.profile-inline {
+			position: relative;
+			top: 0;
+			display: inline-block;
+			}
+
+			.profile-inline ~ .card-title {
+			display: inline-block;
+			margin-left: 4px;
+			vertical-align: top;
+			}
+
+			.text-bold {
+			font-weight: 700;
+			}
+
+			.meta {
+			font-size: 1em;
+			color: rgba(0, 0, 0, .4);
+			}
+
+			.meta a {
+			text-decoration: none;
+			color: rgba(0, 0, 0, .4);
+			}
+
+			.meta a:hover {
+			color: rgba(0, 0, 0, .87);
+			}
+
+			.carousel-indicators-numbers li {
+				text-indent: 0;
+				margin: 0 2px !important;
+				width: 25px !important;
+				height: 25px !important;
+				border: none;
+				border-radius: 100%;
+				line-height: 25px;
+				color: #fff;
+				background-color: #999;
+				transition: all 0.25s ease;
+				text-align: center;
+			}
+
+			.carousel-indicators-numbers li.active, .carousel-indicators-numbers li:hover {
+				margin: 0 2px !important;
+				width: 25px !important;
+				height: 25px !important;
+				background-color: #57b846;
+			}
+
+			.carousel-indicators {
+				bottom:-45px;
+			}
+
+			.container-login100-form-btn {
+			width: 100%;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			}
+
+			.login100-form-btn {
+			font-family: Poppins-Medium;
+			font-size: 16px;
+			color: #fff;
+			line-height: 1.2;
+			text-transform: uppercase;
+
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 20px;
+			width: 100%;
+			height: 50px;
+			background-color: #57b846;
+			border-radius: 25px;
+			border: none;
+			
+			-webkit-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			-moz-transition: all 0.4s;
+			transition: all 0.4s;
+			}
+
+			.login100-form-btn:hover  {
+			background-color: #333333;
+			box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			-ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+			}
+
+			.btn-custom {
+				background-color: #999;
+			}
+
+			.btn.btn-other {
+				margin: 12px auto;
+				padding: 12px;
+				font-size: 12px;
+			}
+			.btn-primary.btn-other {
+				background-color: #3897f0;
+				border: 1px solid #3897f0 !important;
+			}
+
+			.btn.btn-other-modal {
+				padding: 10px;
+				font-size: 12px;
+			}
+			.btn-primary.btn-other-modal {
+				background-color: #3897f0;
+				border: 1px solid #3897f0 !important;
+			}
+
+			::-webkit-scrollbar {
+				display: none;
+			}
+
+	body
+		section.about_us
+			.container(style="overflow-y: scroll; height: 100vh; max-height: 100vh);")
+				a#refresh(href='', style='position: absolute; top: 0; right: 0; color: #000; z-index: 9999999') refresh
+				.row.align-items-center.justify-content-between
+					.col-12
+						span#username.d-none #{username}
+						span#id.d-none #{id}
+						.row
+							.col-12(style='padding-right: 0; padding-left: 0;')
+								.card.card-inverse.card-info
+									#image
+									.card-footer(style="padding-top: 0; padding-bottom: 0;")
+										.btn-group.btn-block(role='group', aria-label='Basic example')
+											button#btn-original.btn.btn-primary.btn-other(style='border: none;') Original
+											button#btn-predicted.btn.btn-primary.btn-other.active.btn-custom(style='border: none;') Predicted
+											button.btn.btn-primary.btn-other(data-toggle='modal', data-target='#exampleModal') Feedback
+									.card-block(style='padding-top: 0; border-top: none;')
+										.meta.card-text.mt-0
+											#carousel-data
+
+		#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+			.modal-dialog(role='document')
+				.modal-content
+					.modal-header(style='padding: 0.5rem 1rem;')
+						h5#exampleModalLabel.modal-title Feedback
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+					.modal-body
+						.form-group.mb-0
+							textarea#txa-feed.form-control.rounded-0(rows='3')
+					.modal-footer(style='padding: 0.5rem 1rem;')
+						button.btn.btn-secondary.mr-auto.btn-other-modal(type='button', data-dismiss='modal') Cancel
+						a#submit-feedback.btn.btn-primary.btn-other-modal(href='')
+							| Submit
+
+
+		script(src='/template/main/js/jquery-1.12.1.min.js')
+		script(src='/template/main/js/popper.min.js')
+		script(src='/template/main/js/bootstrap.min.js')
+		script(src='/template/main/js/jquery.magnific-popup.js')
+		script(src='/template/main/js/swiper.min.js')
+		script(src='/template/main/js/masonry.pkgd.js')
+		script(src='/template/main/js/owl.carousel.min.js')
+		script(src='/template/main/js/jquery.nice-select.min.js')
+		script(src='/template/main/js/slick.min.js')
+		script(src='/template/main/js/jquery.counterup.min.js')
+		script(src='/template/main/js/waypoints.min.js')
+		script(src='/template/main/js/contact.js')
+		script(src='/template/main/js/jquery.ajaxchimp.min.js')
+		script(src='/template/main/js/jquery.form.js')
+		script(src='/template/main/js/jquery.validate.min.js')
+		script(src='/template/main/js/mail-script.js')
+		script(src='/template/main/js/custom.js')
+		script.
+			$(document).ready(function() {
+				let username = $('#username').text();
+				let id = $('#id').text();
+
+				$.ajax({
+					url: 'http://140.118.101.215:5000/images/views?username='+username+'&image='+id,
+					type: 'GET'
+				}).done(function(datas) {
+					let data = datas[0];
+
+					var img = '<img id="img-original" class="card-img-top d-none" src="/images/'+data.file_original+'">';
+					img += '<img id="img-predicted" class="card-img-top" src="/results/images/'+data.file_box+'">';
+					$('#image').append(img);
+
+					var img = document.querySelector("#img-predicted");	
+					img.addEventListener("load", function() {
+						height = 0;
+						height += img.height;
+						height += 35;
+						height += $('.card-footer').height();
+
+						let html = '<div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">';
+						html += '<ol class="carousel-indicators carousel-indicators-numbers">';
+						data.result.forEach(function(element, index) {
+							html += '<li data-target="#carouselExampleIndicators" data-slide-to="'+index+'" '+(index == 0 ? 'class="active"' : '')+'>'+(index+1)+'</li>';
+						})
+						html += '</ol>';
+
+						html += '<div class="carousel-inner">';
+						data.result.forEach(function(element, index) {
+							html += '<div class="carousel-item '+(index == 0 ? 'active' : '')+'">';
+							html += '<table class="table mb-1">';
+							html += '<thead>';
+							html += '<tr>';
+							html += '<td style="border-top: none; border-bottom: 3px solid #'+element.color+'; padding: 0.15rem 0.15rem 0.05rem 0.15rem;" class="text-left"><h4><strong>'+element.number+'. '+element.prediction.objects+'</strong></h4></td>';
+							html += '<td style="border-top: none; border-bottom: 3px solid #'+element.color+'; padding: 0.15rem 0.15rem 0.05rem 0.15rem;" class="text-right"><h4><strong>'+element.score+'%</strong></h4></td>';
+							html += '</tr>';
+							html += '</thead>';
+							html += '</table>';
+
+							html += '<div>'
+							html += '<table class="table mb-1">';
+							html += '<tbody>';
+							html += '<tr>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-left">Relationship</td>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-right"><strong>'+element.prediction.relationships+'</strong></td>';
+							html += '</tr>';
+							html += '<tr>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-left">Symptom</td>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-right"><strong>'+element.prediction.symptoms+'</strong></td>';
+							html += '</tr>';
+							html += '<tr>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-left">Degree</td>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-right"><strong>'+element.prediction.degrees+'</strong></td>';
+							html += '</tr>';
+							html += '<tr>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-left">Diagnosis</td>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-right"><strong>'+element.prediction.diagnosis+'</strong></td>';
+							html += '</tr>';
+							html += '<tr>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5; vertical-align : middle" class="text-left" rowspan="2">Treatment</td>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: 4px solid #FFFFFF; border-bottom: none; background-color: #F5F5F5" class="text-right"><strong>'+element.prediction.surgicaltreat+'</strong></td>';
+							html += '</tr>';
+							html += '<tr>';
+							html += '<td style="padding: 0.5rem 0.25rem; border-top: none; border-bottom: 4px solid #FFFFFF; background-color: #F5F5F5" class="text-right"><strong>'+element.prediction.nonsurgicaltreat+'</strong></td>';
+							html += '</tr>';
+							html += '</tbody>';
+							html += '</table>';
+							html += '</div>';
+							html += '</div>';
+						})
+						html += '</div>';
+						html += '</div>';
+
+						$('#carousel-data').append(html);
+
+						$('#carouselExampleIndicators').carousel({
+							interval: false
+						});
+					});
+				});
+			});
+
+			$(document).on('click', '#btn-original', function() {
+				$(this).addClass('active');
+				$('#btn-predicted').removeClass('active');
+
+				$('#img-original').removeClass('d-none');
+				$('#img-predicted').addClass('d-none');
+			})
+
+			$(document).on('click', '#btn-predicted', function() {
+				$(this).addClass('active');
+				$('#btn-original').removeClass('active');
+
+				$('#img-predicted').removeClass('d-none');
+				$('#img-original').addClass('d-none');	
+			})
+
+			$(document).on('click', '#submit-feedback', function(e) {
+				e.preventDefault();
+
+				let feed = $('#txa-feed').val();
+				let username = $('#username').text();
+				let id = $('#id').text();
+
+				$.ajax({
+					url: 'http://140.118.101.215:5000/feeds/send?username='+username+'&image='+id,
+					type: 'POST',
+					data: {
+						content: feed
+					}
+				}).done(function(data) {
+					$('#exampleModal').modal('hide');
+				})
+			})

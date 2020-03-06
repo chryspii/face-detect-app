@@ -1,0 +1,263 @@
+doctype html
+html(lang='en')
+	head
+		title register
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css')
+		link(rel='icon', type='image/png', href='images/icons/favicon.ico')
+		link(rel='stylesheet', type='text/css', href='template/login/vendor/bootstrap/css/bootstrap.min.css')
+		style.
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.phone {
+				padding-top: 70px;
+				height: 650px;
+				float: right;
+				margin: 10px;
+			}
+			body {
+				background-color: #fafafa !important;
+			}
+			.right-column {
+				background-color: #fff;
+				border: 1px solid #e6e6e6;
+				padding: 40px;
+				height: calc(100vh - 82px);
+			}
+			.instagram-logo {
+				margin: 2em auto;
+				width: 75%;
+			}
+			.info {
+				font-weight: 600;
+				line-height: 20px;
+				font-size: 17px;
+				color: #999;
+			}
+			.or {
+				margin: 2.75em auto;
+				font-size: 12px !important;
+				color: #999;
+				font-weight: 600;
+			}
+			.or::before {
+				content: '';
+				background: #efefef;
+				display: block;
+				height: 2px;
+				width: 45%;
+				position: relative;
+				top: 11px;
+			}
+			.or::after {
+				content: '';
+				background: #efefef;
+				display: block;
+				height: 2px;
+				width: 45%;
+				position: relative;
+				bottom: 10px;
+				left: 55%;
+			}
+			.form-group {
+				margin-bottom: 10px !important;
+			}
+			.form-control {
+				background: #fafafa !important;
+				border: 1px solid #efefef !important;
+				font-size: 12px !important;
+				line-height: 2 !important;
+			}
+			::placeholder {
+				color: #999 !important;
+			}
+			.btn {
+				margin: 12px auto;
+				padding: 12px;
+				font-size: 12px;
+			}
+			.btn-primary {
+				background-color: #3897f0;
+				border: 1px solid #3897f0 !important;
+			}
+			.terms {
+				line-height: 18px;
+				font-size: 12px;
+				color: #999;
+				margin: 5px 20px;
+			}
+			.terms a {
+				text-decoration: none;
+			}
+			.right-column-login {
+				background: #fff;
+				border: 1px solid #e6e6e6;
+				padding: 25px;
+			}
+			.right-column-login p {
+				color: #999;
+				font-size: 11px;
+			}
+			input {
+				font-size: 16px;
+				-webkit-border-radius: 0px;
+				-webkit-appearance: none;
+			}
+			.forget {
+				line-height: 18px;
+				font-size: 12px;
+				color: #999;
+				margin: 1.75em 0;
+				text-align: right;
+			}
+			.forget a {
+				text-decoration: none;
+			}
+			.field-icon {
+				float: right;
+				margin-right: 12px;
+				margin-top: -28px;
+				position: relative;
+				color: #999;
+			}
+
+			.modal-backdrop {
+				background-color: #CDCDCD !important;
+			}
+			.fade.show {
+				opacity: 0.9;
+			}
+			.modal-content {
+				border-radius: 1.3em !important;
+				border: 1px solid rgba(0,0,0,.1);
+			}
+			.modal-dialog {
+				margin: auto 4em !important;
+			}
+			.heading-alert {
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 1.5em;
+				color: #010101;
+				margin-bottom: 0.3em;
+			}
+			.heading-body {
+				font-size: 14px;
+				line-height: 1.5em;
+				color: #010101;
+				margin-bottom: 0;
+			}
+			.modal-footer a {
+				text-decoration: none;
+			}
+	body
+		.container
+			.row
+				.col-lg-12.pr-0.pl-0
+					.right-column.text-center
+						.asd(style='position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%); width: 90%')
+							img.instagram-logo(src='/template/logo.png')
+							p.info Sign up to start using the application.
+							form#form-register
+								.form-group
+									input#txt-name.form-control(type='text' placeholder="Name", name="name", required)
+								.form-group
+									input#txt-username.form-control(type='text' placeholder="Username", name="username", required)
+								.form-group
+									input#txt-password.form-control(type='password' placeholder="Password", name="password", required)
+									<span toggle="#password-field" class="fa fa-eye field-icon toggle-password"></span>
+								button#btn-submit.btn.btn-primary.btn-block(type='submit') Sign up
+							p.terms 
+								| By signing up, you agree to our 
+								b Terms, Data Policy 
+								| and 
+								b Cookies Policy.
+							p.or OR
+							p.terms 
+								| Have an account?
+								a#test(href='http://140.118.101.215:5000/login')  Log in.
+					.right-column-login.text-center
+						p.footer-text
+							| Application Name from CITI
+
+		#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+			.modal-dialog.modal-sm.h-100.d-flex.flex-column.justify-content-center.my-0(role='document')
+				.modal-content
+					.modal-body.text-center
+						p.heading-alert
+						p.heading-body
+					.modal-footer(style="padding-top: 0.5em; padding-bottom: 0.5em;")
+						a.mx-auto(href='', data-dismiss='modal') Close
+
+		script(src='template/login/vendor/jquery/jquery-3.2.1.min.js')
+		script(src='/template/main/js/popper.min.js')
+		script(src='template/login/vendor/bootstrap/js/bootstrap.min.js')
+		script.
+			// toggle view password
+			$(".toggle-password").click(function() {
+				$(this).toggleClass("fa-eye fa-eye-slash");
+				
+				if ($('#txt-password').attr("type") == "password") {
+					$('#txt-password').attr("type", "text");
+				} else {
+					$('#txt-password').attr("type", "password");
+				}
+			});
+
+			// enable disable submit button
+			const inputSelector = ':input[required]:visible';
+			function checkForm() {
+				var isValidForm = true;
+
+				$(inputSelector).each(function() {
+					if (!this.value.trim()) {
+						isValidForm = false;
+					}
+				});
+
+				$('#btn-submit').prop('disabled', !isValidForm);
+			}
+			$('#btn-submit').prop('disabled', true);
+			$(inputSelector).on('keyup', function() {
+				checkForm();
+			})
+
+			// submit button pressed
+			$(document).on('click', '#btn-submit', function(e) {
+				e.preventDefault();
+
+				let data = $('#form-register').serializeArray();
+				let values = {};
+
+				$.each(data, function(i, field) {
+					values[field.name] = field.value;
+				});
+
+				$.ajax({
+					url 	: 'http://140.118.101.215:5000/users/register',
+					type 	: 'POST',
+					data 	: values
+				}).done(function(data) {
+					if(data.error == 2) {
+						$('.heading-alert').text('Username Used');
+						$('.heading-body').text('The username already used. Please use another username.');
+						$('#exampleModal').modal('show');
+					} else if(data.error == 0) {
+						$('.heading-alert').text('Register Success');
+						$('.heading-body').text('Register success, you will be redirected to login page.');
+						$('#exampleModal').modal('show');
+						setTimeout(function() {
+							window.location.href = "http://140.118.101.215:5000/login";
+						}, 1000);
+					}
+				}).fail(function(data) {
+					if(data.error == 1) {
+						$('.heading-alert').text('Failed');
+						$('.heading-body').text('Something wen\'t wrong, please try again later.');
+						$('#exampleModal').modal('show');
+					}
+				})
+			});

@@ -1,0 +1,7 @@
+Dataset/
+backend/node_modules
+backend/package-lock.json
+backend/opencv_world342.dll
+backend/weight/obj-tiny_last.weights
+backend/weight/yolov3.weights
+
